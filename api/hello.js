@@ -1,7 +1,7 @@
-const express = require('express');
+import express from 'express';
 const app = express();
-const helloController = require('../controllers/helloController');
+import { getHello } from '../controllers/helloController.js'
 
-app.get('/api/hello', helloController.getHello);
+app.get('/api/hello', getHello);
 
-module.exports = app;
+export default app;

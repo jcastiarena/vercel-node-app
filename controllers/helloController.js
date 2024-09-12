@@ -1,6 +1,6 @@
-const helloService = require('../services/helloService');
+import { sayHello } from '../services/helloService.js';
 
-exports.getHello = (req, res) => {
-  const message = helloService.sayHello();
+export const getHello = (req, res) => {
+  const message = sayHello();
   res.status(200).json({ message });
 };
