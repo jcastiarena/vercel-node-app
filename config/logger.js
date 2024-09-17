@@ -6,7 +6,8 @@ import DailyRotateFile from 'winston-daily-rotate-file';
 
 // Create log directory if it doesn't exist
 import fs from 'fs';
-if (!fs.existsSync(config.logDir)) {
+console.log('Environment: ' + process.env.NODE_ENV);
+if (process.env.NODE_ENV !== 'production' && !fs.existsSync(config.logDir)) {
   fs.mkdirSync(config.logDir);
 }
 
