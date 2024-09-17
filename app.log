@@ -1,0 +1,69 @@
+2024-09-13 12:34:32 [INFO] - Getting all users...
+2024-09-13 12:34:34 [INFO] - All users retrieved successfully
+2024-09-13 12:37:49 [INFO] - Getting all users...
+2024-09-13 12:37:49 [INFO] - All users retrieved successfully
+2024-09-13 12:38:36 [INFO] - Getting all users...
+2024-09-13 12:38:37 [INFO] - All users retrieved successfully
+2024-09-13 12:39:04 [INFO] - Getting all users...
+2024-09-13 12:39:05 [INFO] - All users retrieved successfully
+2024-09-13 12:51:01 [INFO] - file:///Users/saverio/workspace/vercel-node-app/controllers/userController.js
+2024-09-13 12:51:01 [INFO] - Getting all users...
+2024-09-13 12:51:02 [INFO] - All users retrieved successfully
+2024-09-13 12:51:02 [INFO] - file:///Users/saverio/workspace/vercel-node-app/controllers/userController.js
+2024-09-13 12:51:46 [INFO] - file:///Users/saverio/workspace/vercel-node-app/controllers/userController.js
+2024-09-13 12:51:46 [INFO] - Getting all users...
+2024-09-13 12:51:47 [INFO] - All users retrieved successfully
+2024-09-13 12:51:47 [INFO] - file:///Users/saverio/workspace/vercel-node-app/controllers/userController.js
+2024-09-13 12:52:08 [INFO] - file:///Users/saverio/workspace/vercel-node-app/controllers/userController.js
+2024-09-13 12:52:08 [INFO] - Getting all users...
+2024-09-13 12:52:08 [INFO] - All users retrieved successfully
+2024-09-13 12:52:08 [INFO] - file:///Users/saverio/workspace/vercel-node-app/controllers/userController.js
+2024-09-13 12:52:16 [INFO] - file:///Users/saverio/workspace/vercel-node-app/controllers/userController.js
+2024-09-13 12:52:16 [INFO] - Getting all users...
+2024-09-13 12:52:17 [INFO] - All users retrieved successfully
+2024-09-13 12:52:17 [INFO] - file:///Users/saverio/workspace/vercel-node-app/controllers/userController.js
+2024-09-13 12:55:12 [INFO] - userController.js
+2024-09-13 12:55:13 [INFO] - userController.js
+2024-09-13 13:35:43 [INFO] - userController.js
+2024-09-13 13:36:34 [INFO] - userController.js
+2024-09-13 13:36:35 [INFO] - userController.js
+2024-09-13 13:38:05 [INFO] - userController.js
+2024-09-13 13:38:06 [INFO] - userController.js
+2024-09-13 13:38:17 [INFO] - userController.js
+2024-09-13 13:38:18 [INFO] - userController.js
+2024-09-13 13:40:06 [INFO] - userController.js
+2024-09-13 13:40:07 [INFO] - userController.js
+2024-09-13 13:45:54 [INFO] - userController.js
+2024-09-13 13:45:55 [INFO] - userController.js
+2024-09-13 13:46:28 [INFO] - userController.js
+2024-09-13 13:46:29 [INFO] - userController.js
+2024-09-13 13:47:00 [INFO] - hola
+2024-09-13 13:47:01 [INFO] - userController.js
+2024-09-13 13:49:13 [INFO] - hola
+2024-09-13 13:49:14 [INFO] - userController.js
+2024-09-13 13:49:36 [INFO] - userController.js
+2024-09-13 13:49:37 [INFO] - userController.js
+2024-09-13 13:53:56 [INFO] - /Users/saverio/workspace/vercel-node-app/loggertest.js
+2024-09-13 13:56:54 [INFO] - /Users/saverio/workspace/vercel-node-app/loggertest.js
+2024-09-13 13:57:40 [INFO] - /Users/saverio/workspace/vercel-node-app/loggertest.js
+2024-09-13 13:58:12 [INFO] - /Users/saverio/workspace/vercel-node-app/loggertest.js
+2024-09-13 13:58:25 [INFO] - /Users/saverio/workspace/vercel-node-app/loggertest.js
+2024-09-13 13:58:43 [INFO] - /Users/saverio/workspace/vercel-node-app/loggertest.js
+2024-09-13 13:59:54 [INFO] - /Users/saverio/workspace/vercel-node-app/loggertest.js
+2024-09-13 14:28:52 [INFO] - /Users/saverio/workspace/vercel-node-app/loggertest.js
+2024-09-13 14:45:15 [INFO] - loggertest.js
+2024-09-13 14:45:54 [INFO] - loggertest.js
+2024-09-13 14:46:13 [INFO] - loggertest.js
+2024-09-13 14:46:18 [INFO] - loggertest.js
+2024-09-13 14:46:28 [INFO] - loggertest.js
+2024-09-13 14:46:31 [INFO] - loggertest.js
+2024-09-13 14:47:31 [INFO] - loggertest.js
+2024-09-13 14:59:36 [INFO] - loggertest.js
+2024-09-13 15:02:59 [INFO] - undefined - loggertest.js
+2024-09-13 15:03:29 [INFO] - undefined - loggertest.js
+2024-09-13 15:25:43 [info] loggertest.js: This is a test log message
+2024-09-13 15:25:52 [info] loggertest.js: This is a test log message
+2024-09-13 15:26:04 [info] loggertest.js: This is a test log message
+2024-09-13 15:26:33 [INFO] loggertest.js: This is a test log message
+2024-09-13 15:27:10 [INFO] loggertest.js: This is a test log message
+2024-09-13 15:27:10 [WARN] loggertest.js: This is a test log message
