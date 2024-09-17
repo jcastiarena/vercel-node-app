@@ -14,15 +14,15 @@ const userService = {
   },
   
   async patchUser(userId, userData) {
-    return await userRepository.patch(userId, userData);
+    return await userRepository.patchUser(userId, userData);
   },
   
   async updateUser(userId, userData) {
-    return await userRepository.update(userId, userData);
+    return await userRepository.updateUser(userId, userData);
   },
   
   async deleteUser(userId) {
-    return await userRepository.delete(userId);
+    return await userRepository.deleteUser(userId);
   }
 };
 

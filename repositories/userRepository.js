@@ -53,7 +53,7 @@ const userRepository = {
     }
   },
 
-  async patch(userId, userData) {
+  async patchUser(userId, userData) {
     try {
       log.info('Patching user with ID: ' + userId);
       return await User.findByIdAndUpdate(userId, { $set: userData }, { new: true });
@@ -63,7 +63,7 @@ const userRepository = {
     }
   },
   
-  async update(userId, userData) {
+  async updateUser(userId, userData) {
     try {
       log.info('Updating user with ID: ' + userId);
       // return await User.findByIdAndUpdate(userId, userData, { new: true });
@@ -86,7 +86,7 @@ const userRepository = {
     }
   },
   
-  async delete(userId) {
+  async deleteUser(userId) {
     try {
       log.info('Deleting user with ID: ' + userId);
       return await User.findByIdAndDelete(userId);

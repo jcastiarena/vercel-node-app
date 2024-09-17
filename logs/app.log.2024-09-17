@@ -1235,3 +1235,501 @@
   "password": "$2b$12$UREFwsRUoyF0CRqGNK0LzO0HM/jLhgUCNNIJ9RJAqMUQ74crlJ1Vv"
 }
 2024-09-17 10:14:06 [INFO] userRepository.js: User created successfully
+2024-09-17 10:24:00 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User"
+}
+2024-09-17 10:27:05 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User"
+}
+2024-09-17 10:29:17 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User"
+}
+2024-09-17 10:31:01 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User"
+}
+2024-09-17 10:34:21 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User"
+}
+2024-09-17 10:36:39 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User"
+}
+2024-09-17 10:36:39 [ERROR] userRepository.js: ValidationError: User validation failed: email: Path `email` is required., password: Path `password` is required.
+    at Document.invalidate (/Users/saverio/workspace/vercel-node-app/node_modules/mongoose/lib/document.js:3312:32)
+    at /Users/saverio/workspace/vercel-node-app/node_modules/mongoose/lib/document.js:3073:17
+    at /Users/saverio/workspace/vercel-node-app/node_modules/mongoose/lib/schemaType.js:1388:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+2024-09-17 10:36:39 [INFO] userRepository.js: Getting all users
+2024-09-17 10:36:39 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 10:36:39 [INFO] userRepository.js: Updating user with ID: 12345
+2024-09-17 10:36:39 [ERROR] userRepository.js: Failed to update user with id: 12345 CastError: Cast to ObjectId failed for value "12345" (type string) at path "_id" for model "User"
+2024-09-17 10:36:39 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 10:38:18 [INFO] userRepository.js: Getting all users
+2024-09-17 10:38:18 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 10:38:18 [INFO] userRepository.js: Updating user with ID: 12345
+2024-09-17 10:38:18 [ERROR] userRepository.js: Failed to update user with id: 12345 CastError: Cast to ObjectId failed for value "12345" (type string) at path "_id" for model "User"
+2024-09-17 10:38:18 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 10:44:04 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User"
+}
+2024-09-17 10:44:24 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User"
+}
+2024-09-17 10:46:23 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 10:46:26 [INFO] userRepository.js: Getting all users
+2024-09-17 10:46:26 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 10:46:26 [INFO] userRepository.js: Updating user with ID: 12345
+2024-09-17 10:46:26 [ERROR] userRepository.js: Failed to update user with id: 12345 CastError: Cast to ObjectId failed for value "12345" (type string) at path "_id" for model "User"
+2024-09-17 10:46:26 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 10:46:33 [ERROR] userRepository.js: MongooseError: Operation `users.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (/Users/saverio/workspace/vercel-node-app/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:185:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2024-09-17 10:49:21 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 10:49:26 [INFO] userRepository.js: Getting all users
+2024-09-17 10:49:26 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 10:49:26 [INFO] userRepository.js: Updating user with ID: 12345
+2024-09-17 10:49:26 [ERROR] userRepository.js: Failed to update user with id: 12345 CastError: Cast to ObjectId failed for value "12345" (type string) at path "_id" for model "User"
+2024-09-17 10:49:26 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 10:49:31 [ERROR] userRepository.js: MongooseError: Operation `users.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (/Users/saverio/workspace/vercel-node-app/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:185:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2024-09-17 10:56:27 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 10:56:32 [INFO] userRepository.js: Getting all users
+2024-09-17 10:56:32 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 10:56:32 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 10:56:37 [ERROR] userRepository.js: MongooseError: Operation `users.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (/Users/saverio/workspace/vercel-node-app/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:185:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2024-09-17 10:57:17 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 10:57:22 [INFO] userRepository.js: Getting all users
+2024-09-17 10:57:22 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 10:57:22 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 10:57:27 [ERROR] userRepository.js: MongooseError: Operation `users.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (/Users/saverio/workspace/vercel-node-app/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:185:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2024-09-17 10:58:44 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 10:58:49 [INFO] userRepository.js: Getting all users
+2024-09-17 10:58:49 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 10:58:49 [INFO] userRepository.js: Updating user with ID: 66e98b19b287e073d63454b5
+2024-09-17 10:58:51 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 10:58:54 [ERROR] userRepository.js: MongooseError: Operation `users.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (/Users/saverio/workspace/vercel-node-app/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:185:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2024-09-17 10:58:59 [ERROR] userRepository.js: Failed to update user with id: 66e98b19b287e073d63454b5 MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+2024-09-17 11:03:16 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 11:03:21 [INFO] userRepository.js: Getting all users
+2024-09-17 11:03:21 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 11:03:21 [INFO] userRepository.js: Updating user with ID: 66e98c293d81dcf6f7288a26
+2024-09-17 11:03:23 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 11:03:26 [ERROR] userRepository.js: MongooseError: Operation `users.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (/Users/saverio/workspace/vercel-node-app/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:185:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2024-09-17 11:03:31 [ERROR] userRepository.js: Failed to update user with id: 66e98c293d81dcf6f7288a26 MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+2024-09-17 11:05:17 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 11:05:27 [ERROR] userRepository.js: MongooseError: Operation `users.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (/Users/saverio/workspace/vercel-node-app/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:185:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2024-09-17 11:05:27 [INFO] userRepository.js: Getting all users
+2024-09-17 11:05:27 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 11:05:27 [INFO] userRepository.js: Updating user with ID: 66e98ca7c22194d1056afc8f
+2024-09-17 11:05:29 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 11:05:37 [ERROR] userRepository.js: Failed to update user with id: 66e98ca7c22194d1056afc8f MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+2024-09-17 11:07:45 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 11:07:47 [INFO] userRepository.js: Getting all users
+2024-09-17 11:07:47 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 11:07:47 [INFO] userRepository.js: Updating user with ID: 66e98d331c99b32399e8badd
+2024-09-17 11:07:49 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 11:07:55 [ERROR] userRepository.js: MongooseError: Operation `users.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (/Users/saverio/workspace/vercel-node-app/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:185:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2024-09-17 11:07:57 [ERROR] userRepository.js: Failed to update user with id: 66e98d331c99b32399e8badd MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+2024-09-17 11:08:50 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 11:09:00 [ERROR] userRepository.js: MongooseError: Operation `users.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (/Users/saverio/workspace/vercel-node-app/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:185:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2024-09-17 11:09:00 [INFO] userRepository.js: Getting all users
+2024-09-17 11:09:00 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 11:09:00 [INFO] userRepository.js: Updating user with ID: 66e98d7c078b5a7e3dd9be45
+2024-09-17 11:09:02 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 11:09:10 [ERROR] userRepository.js: Failed to update user with id: 66e98d7c078b5a7e3dd9be45 MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+2024-09-17 11:10:01 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 11:10:11 [ERROR] userRepository.js: MongooseError: Operation `users.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (/Users/saverio/workspace/vercel-node-app/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:185:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2024-09-17 11:10:11 [INFO] userRepository.js: Getting all users
+2024-09-17 11:10:11 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 11:10:11 [INFO] userRepository.js: Updating user with ID: 66e98dc3667a6b99a6d683f0
+2024-09-17 11:10:13 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 11:10:21 [ERROR] userRepository.js: Failed to update user with id: 66e98dc3667a6b99a6d683f0 MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+2024-09-17 11:10:43 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 11:10:53 [ERROR] userRepository.js: MongooseError: Operation `users.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (/Users/saverio/workspace/vercel-node-app/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:185:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2024-09-17 11:10:53 [INFO] userRepository.js: Getting all users
+2024-09-17 11:10:53 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 11:10:53 [INFO] userRepository.js: Updating user with ID: 66e98ded37ac6c6276f8948c
+2024-09-17 11:11:03 [ERROR] userRepository.js: Failed to update user with id: 66e98ded37ac6c6276f8948c MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+2024-09-17 11:11:03 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 11:13:16 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 11:13:21 [INFO] userRepository.js: Getting all users
+2024-09-17 11:13:21 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 11:13:21 [INFO] userRepository.js: Updating user with ID: 66e98e81d4bd3cb319968d77
+2024-09-17 11:13:26 [ERROR] userRepository.js: MongooseError: Operation `users.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (/Users/saverio/workspace/vercel-node-app/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:185:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2024-09-17 11:13:31 [ERROR] userRepository.js: Failed to update user with id: 66e98e81d4bd3cb319968d77 MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+2024-09-17 11:13:31 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 11:13:50 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 11:14:00 [ERROR] userRepository.js: MongooseError: Operation `users.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (/Users/saverio/workspace/vercel-node-app/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:185:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2024-09-17 11:14:00 [INFO] userRepository.js: Getting all users
+2024-09-17 11:14:00 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 11:14:00 [INFO] userRepository.js: Updating user with ID: 66e98ea81ac7866a134ecbda
+2024-09-17 11:14:10 [ERROR] userRepository.js: Failed to update user with id: 66e98ea81ac7866a134ecbda MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+2024-09-17 11:14:10 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 11:32:15 [INFO] userRepository.js: Updating user with ID: 66e992ef1087bd89f073b123
+2024-09-17 11:33:52 [INFO] userRepository.js: Getting all users
+2024-09-17 11:33:52 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 11:33:52 [INFO] userRepository.js: Updating user with ID: 66e9935050489c221dce99ca
+2024-09-17 11:33:52 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 11:34:26 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 11:34:26 [INFO] userRepository.js: User created successfully
+2024-09-17 11:34:26 [INFO] userRepository.js: Getting all users
+2024-09-17 11:34:26 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 11:34:26 [INFO] userRepository.js: Updating user with ID: 66e993726a7ea3e3f7bf1965
+2024-09-17 11:34:26 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 11:36:31 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 11:36:31 [INFO] userRepository.js: User created successfully
+2024-09-17 11:36:31 [INFO] userRepository.js: Getting all users
+2024-09-17 11:36:31 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 11:36:31 [INFO] userRepository.js: Updating user with ID: 66e993ef202f16bd682e3d6c
+2024-09-17 11:36:31 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 11:37:11 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 11:37:11 [INFO] userRepository.js: User created successfully
+2024-09-17 11:37:11 [INFO] userRepository.js: Getting all users
+2024-09-17 11:37:11 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 11:37:11 [INFO] userRepository.js: Updating user with ID: 66e99417132a5591c0ccab84
+2024-09-17 11:37:11 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 11:38:30 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 11:38:30 [INFO] userRepository.js: User created successfully
+2024-09-17 11:38:30 [INFO] userRepository.js: Getting all users
+2024-09-17 11:38:30 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 11:38:30 [INFO] userRepository.js: Updating user with ID: 66e99466918c04081c4ad830
+2024-09-17 11:38:30 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 11:40:22 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 11:40:22 [INFO] userRepository.js: User created successfully
+2024-09-17 11:40:22 [INFO] userRepository.js: Getting all users
+2024-09-17 11:40:22 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 11:40:22 [INFO] userRepository.js: Updating user with ID: 66e994d6d72ce2f9d91cacfb
+2024-09-17 11:40:22 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 11:41:41 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 11:41:41 [INFO] userRepository.js: User created successfully
+2024-09-17 11:41:41 [INFO] userRepository.js: Getting all users
+2024-09-17 11:41:41 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 11:41:41 [INFO] userRepository.js: Updating user with ID: 66e995253f869c5744e47738
+2024-09-17 11:41:41 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 11:42:06 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 11:42:06 [INFO] userRepository.js: User created successfully
+2024-09-17 11:42:06 [INFO] userRepository.js: Getting all users
+2024-09-17 11:42:06 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 11:42:06 [INFO] userRepository.js: Updating user with ID: 66e9953e12c5d73b25ca4a40
+2024-09-17 11:42:06 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 11:46:40 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 11:46:41 [INFO] userRepository.js: User created successfully
+2024-09-17 11:46:41 [INFO] userRepository.js: Getting all users
+2024-09-17 11:46:41 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 11:46:41 [INFO] userRepository.js: Updating user with ID: 66e9965175a7f8966fe3bcac
+2024-09-17 11:46:41 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 11:47:19 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 11:47:19 [INFO] userRepository.js: User created successfully
+2024-09-17 11:47:19 [INFO] userRepository.js: Getting all users
+2024-09-17 11:47:19 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 11:47:19 [INFO] userRepository.js: Updating user with ID: 66e99677f8342b881c8c8b28
+2024-09-17 11:47:19 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 11:49:33 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 11:49:33 [INFO] userRepository.js: User created successfully
+2024-09-17 11:49:33 [INFO] userRepository.js: Getting all users
+2024-09-17 11:49:33 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 11:49:33 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 11:49:56 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 11:49:56 [INFO] userRepository.js: User created successfully
+2024-09-17 11:49:56 [INFO] userRepository.js: Getting all users
+2024-09-17 11:49:56 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 11:49:56 [INFO] userRepository.js: Updating user with ID: 66e99714c57e7cfc7577cc86
+2024-09-17 11:49:56 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 11:51:21 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 11:51:21 [INFO] userRepository.js: User created successfully
+2024-09-17 11:51:21 [INFO] userRepository.js: Getting all users
+2024-09-17 11:51:21 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 11:51:21 [INFO] userRepository.js: Updating user with ID: 66e99769148e241389e1c942
+2024-09-17 11:51:21 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 11:52:07 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 11:52:07 [INFO] userRepository.js: User created successfully
+2024-09-17 11:52:07 [INFO] userRepository.js: Getting all users
+2024-09-17 11:52:07 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 11:52:07 [INFO] userRepository.js: Updating user with ID: 66e9979790fe0b3cef35ba2e
+2024-09-17 11:52:07 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 11:57:35 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 11:57:35 [INFO] userRepository.js: User created successfully
+2024-09-17 11:57:35 [INFO] userRepository.js: Getting all users
+2024-09-17 11:57:35 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 11:57:35 [INFO] userRepository.js: Updating user with ID: 66e998df893ec5359d28c728
+2024-09-17 11:57:35 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 11:58:05 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 11:58:05 [INFO] userRepository.js: User created successfully
+2024-09-17 11:58:05 [INFO] userRepository.js: Getting all users
+2024-09-17 11:58:05 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 11:58:05 [INFO] userRepository.js: Updating user with ID: 66e998fd727808b7d6c5784e
+2024-09-17 11:58:05 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 11:59:02 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 11:59:02 [INFO] userRepository.js: User created successfully
+2024-09-17 11:59:02 [INFO] userRepository.js: Getting all users
+2024-09-17 11:59:02 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 11:59:02 [INFO] userRepository.js: Updating user with ID: 66e999362162f22fb352e2f9
+2024-09-17 11:59:02 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 11:59:50 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 11:59:50 [INFO] userRepository.js: User created successfully
+2024-09-17 11:59:50 [INFO] userRepository.js: Getting all users
+2024-09-17 11:59:50 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 11:59:50 [INFO] userRepository.js: Updating user with ID: 66e99966efe9b2c0e63f600c
+2024-09-17 11:59:50 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 12:00:39 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 12:00:39 [INFO] userRepository.js: User created successfully
+2024-09-17 12:00:39 [INFO] userRepository.js: Getting all users
+2024-09-17 12:00:39 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 12:00:39 [INFO] userRepository.js: Updating user with ID: 66e99997fa151fda62d57625
+2024-09-17 12:00:39 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 12:01:37 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 12:01:37 [INFO] userRepository.js: User created successfully
+2024-09-17 12:01:37 [INFO] userRepository.js: Getting all users
+2024-09-17 12:01:37 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 12:01:37 [INFO] userRepository.js: Updating user with ID: 66e999d1b475dfea0ffd0b96
+2024-09-17 12:01:37 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 12:03:29 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 12:03:29 [INFO] userRepository.js: User created successfully
+2024-09-17 12:03:29 [INFO] userRepository.js: Getting all users
+2024-09-17 12:03:29 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 12:03:30 [INFO] userRepository.js: Updating user with ID: 66e99a416e477169bb660f19
+2024-09-17 12:03:30 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 12:04:44 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 12:04:44 [INFO] userRepository.js: User created successfully
+2024-09-17 12:04:44 [INFO] userRepository.js: Getting all users
+2024-09-17 12:04:44 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 12:04:44 [INFO] userRepository.js: Updating user with ID: 66e99a8ce404f394841b6d5d
+2024-09-17 12:04:44 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 12:05:53 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 12:05:53 [INFO] userRepository.js: User created successfully
+2024-09-17 12:05:53 [INFO] userRepository.js: Getting all users
+2024-09-17 12:05:53 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 12:05:53 [INFO] userRepository.js: Updating user with ID: 66e99ad12726a1d44a85d13f
+2024-09-17 12:05:53 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 12:06:40 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 12:06:40 [INFO] userRepository.js: User created successfully
+2024-09-17 12:06:40 [INFO] userRepository.js: Getting all users
+2024-09-17 12:06:40 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 12:06:40 [INFO] userRepository.js: Updating user with ID: 66e99b007977a3137b440f08
+2024-09-17 12:06:40 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 14:52:37 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 14:52:37 [INFO] userRepository.js: User created successfully
+2024-09-17 14:52:37 [INFO] userRepository.js: Getting all users
+2024-09-17 14:52:37 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 14:52:37 [INFO] userRepository.js: Updating user with ID: 66e9c1e56d326c2f334b108a
+2024-09-17 14:52:37 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 15:21:09 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 15:21:09 [INFO] userRepository.js: User created successfully
+2024-09-17 15:21:09 [INFO] userRepository.js: Getting all users
+2024-09-17 15:21:09 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 15:21:09 [INFO] userRepository.js: Updating user with ID: 66e9c89582ce5f46ff4968e0
+2024-09-17 15:21:09 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 16:06:52 [INFO] userRepository.js: Creating user with data {
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "securePassword"
+}
+2024-09-17 16:06:52 [INFO] userRepository.js: User created successfully
+2024-09-17 16:06:52 [INFO] userRepository.js: Getting all users
+2024-09-17 16:06:52 [INFO] userRepository.js: All users retrieved: [object Object],[object Object]
+2024-09-17 16:06:52 [INFO] userRepository.js: Updating user with ID: 66e9d34cfb5367d6b91ad890
+2024-09-17 16:06:52 [INFO] userRepository.js: Deleting user with ID: 12345
+2024-09-17 16:09:37 [INFO] userRepository.js: Creating user with data {
+  "name": "Saverios",
+  "email": "saverio@gameofthron.es",
+  "password": "$2b$12$UREFwsRUoyF0CRqGNK0LzO0HM/jLhgUCNNIJ9RJAqMUQ74crlJ1Vv"
+}
+2024-09-17 16:09:38 [ERROR] userRepository.js: MongoServerError: E11000 duplicate key error collection: sample_mflix.users index: email_1 dup key: { email: "saverio@gameofthron.es" }
+    at InsertOneOperation.execute (/Users/saverio/workspace/vercel-node-app/node_modules/mongoose/node_modules/mongodb/lib/operations/insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeOperation (/Users/saverio/workspace/vercel-node-app/node_modules/mongoose/node_modules/mongodb/lib/operations/execute_operation.js:136:16)
+    at async Collection.insertOne (/Users/saverio/workspace/vercel-node-app/node_modules/mongoose/node_modules/mongodb/lib/collection.js:154:16)
+2024-09-17 16:09:55 [INFO] userRepository.js: Creating user with data {
+  "name": "Saverios",
+  "email": "saverio@gameofthron.es.ar",
+  "password": "$2b$12$UREFwsRUoyF0CRqGNK0LzO0HM/jLhgUCNNIJ9RJAqMUQ74crlJ1Vv"
+}
+2024-09-17 16:09:56 [INFO] userRepository.js: User created successfully
+2024-09-17 16:10:11 [INFO] userRepository.js: Deleting user with ID: 66e9d40335d1e37e8fb0bd3d
