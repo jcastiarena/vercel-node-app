@@ -1,14 +1,10 @@
 import express from 'express';
 const app = express();
 
-import { getHello, updateHello } from '../controllers/helloController.js'
 import userController from '../controllers/userController.js';
 import { validateUser, handleValidationErrors } from '../middlewares/userValidation.js';
 
 app.use(express.json());
-
-app.get('/api/hello', getHello);
-app.post('/api/hello', updateHello);
 
 app.post('/api/users', validateUser, handleValidationErrors, userController.createUser);
 app.get('/api/users', userController.getAllUsers);
