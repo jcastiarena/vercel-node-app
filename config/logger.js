@@ -4,14 +4,7 @@ import { fileURLToPath } from 'url';
 import config from './loggerConfig.js';
 import DailyRotateFile from 'winston-daily-rotate-file';
 
-// Create log directory if it doesn't exist
-import fs from 'fs';
-console.log('Environment: ' + process.env.NODE_ENV);
-if (process.env.NODE_ENV !== 'production' && !fs.existsSync(config.logDir)) {
-  fs.mkdirSync(config.logDir);
-}
-
-const { format, transports, createLogger } = winston;
+const { format, createLogger } = winston;
 const { combine, timestamp, printf } = format;
 
 // Function to get the current file's name in ES modules
@@ -28,7 +21,28 @@ export default (filePath) => {
     return `${timestamp} [${level.toUpperCase()}] ${fileName}: ${stack || message}`;
   });
 
-  
+  const transports = [];
+
+  // Add console for all environments
+  transports.push(
+    new winston.transports.Console({
+      format: combine(customFormat),
+    })
+  );
+
+  // Conditionally add DailyRotateFile in local environment
+  if (process.env.NODE_ENV === 'development' || process.env.LOG_ROTATION === 'true') {
+    transports.push(
+      new DailyRotateFile({
+        filename: path.join(config.logDir, config.logFile),
+        datePattern: 'YYYY-MM-DD',
+        maxSize: "1g",
+        maxDays: "3d",
+        zippedArchive: true,
+      })
+    );
+  }
+
   // Initialize the Winston logger
   const logger = createLogger({
     level: 'info',
@@ -41,27 +55,17 @@ export default (filePath) => {
       format.splat(),
       customFormat
     ),
-    transports: [
-      new transports.Console(), // Log to console
-      // new transports.File({ filename: path.join(config.logDir, config.logFile) }), // Log to a file
-      new DailyRotateFile({
-        filename: path.join(config.logDir, config.logFile),
-        maxSize: "1g",
-        maxDays: "3d",
-        zippedArchive: true,
-        datePattern: 'YYYY-MM-DD'
-      })
-    ],
+    transports,
   })
     
-  // Log also to console if not in production
-  if (process.env.NODE_ENV === "development") {
-    loggerInstance.add(
-      new transports.Console({
-        format: combine(colorize(), customFormat),
-      })
-    );
-  }
+  // // Log also to console if not in production
+  // if (process.env.NODE_ENV === "development") {
+  //   loggerInstance.add(
+  //     new transports.Console({
+  //       format: combine(colorize(), customFormat),
+  //     })
+  //   );
+  // }
 
   return logger;
 };
