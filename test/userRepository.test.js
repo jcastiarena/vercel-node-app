@@ -5,6 +5,9 @@ import User from '../models/userModel.js';
 import userRepository from '../repositories/userRepository.js';
 import mongoose from 'mongoose';
 import { MongoMemoryServer } from 'mongodb-memory-server';
+import logger from '../config/logger.js';
+const log = logger(import.meta.url);
+
 
 describe('User Repository', () => {
   let mongoServer;
@@ -71,21 +74,44 @@ describe('User Repository', () => {
   
     
   describe('getAllUsers', () => {
-    it('should return all users', async () => {
+    let mongooseStub, findStub, sortStub, skipStub, limitStub;
+    
+    afterEach(() => {
+      sinon.restore();
+    });
+  
+    it('should return paginated and sorted users', async () => {
       const mockUsers = [
-        { _id: '12345', name: 'User 1' },
-        { _id: '67890', name: 'User 2' }
+        { _id: '12345', name: 'User 1', createdAt: new Date() },
+        { _id: '67890', name: 'User 2', createdAt: new Date() }
       ];
-
-      // Stub the find method of the Mongoose model
-      mongooseStub = sinon.stub(User, 'find').resolves(mockUsers);
-
-      const result = await userRepository.getAllUsers();
-      expect(result).to.deep.equal(mockUsers);
-      expect(mongooseStub.calledOnce).to.be.true;
+  
+      limitStub = sinon.stub().resolves(mockUsers);
+      skipStub = sinon.stub().returns({ limit: limitStub });
+      sortStub = sinon.stub().returns({ skip: skipStub });
+      findStub = sinon.stub(User, 'find').returns({ sort: sortStub });
+  
+      const result = await userRepository.getAllUsers(2, 5, 'desc'); // Simulate page 2, limit 5, sorting desc
+      log.info('getAllUsers: ' + JSON.stringify(result.users, null, 2));
+      expect(result.users).to.deep.equal(mockUsers);
+  
+      // Check that Mongoose was called with correct pagination and sorting
+      expect(findStub.calledOnce).to.be.true;
+      expect(sortStub.calledWith({ createdAt: -1 })).to.be.true; // -1 for 'desc'
+      expect(skipStub.calledWith(5)).to.be.true; // Skip first 5 results (page 2 with limit 5)
+      expect(limitStub.calledWith(5)).to.be.true; // Limit to 5 results
+    });
+  
+    it('should handle errors thrown by Mongoose', async () => {
+      mongooseStub = sinon.stub(User, 'find').throws(new Error('Mongoose Error'));
+  
+      const result = await userRepository.getAllUsers(1, 10, 'asc');
+      expect(result.users).to.deep.equal([]); // Should return an empty array on error
+  
+      mongooseStub.restore();
     });
   });
-
+  
   describe('updateUser', () => {
     it('should update a user successfully', async () => {
       let findOneAndUpdateStub;

@@ -46,30 +46,54 @@ describe('User Controller', () => {
   });
 
   describe('getAllUsers', () => {
-    it('should return all users and status 200', async () => {
-      const mockUsers = [{ id: 1, name: 'John Doe' }, { id: 2, name: 'Jane Doe' }];
+    afterEach(() => {
+      sinon.restore();
+    });
+  
+    it('should return paginated users and status 200', async () => {
+      const mockUsers = { users: [{ id: 1, name: 'John Doe' }, { id: 2, name: 'Jane Doe' }], currentPage: 1, totalPages: 2, totalUsers: 10 };
       sinon.stub(userService, 'getAllUsers').resolves(mockUsers);
-
+  
+      req.query = { page: '1', limit: '2', sort: 'asc' }; // Simulating pagination and sorting parameters
+  
       await userController.getAllUsers(req, res);
-
+  
+      expect(userService.getAllUsers.calledWith(1, 2, 'asc')).to.be.true; // Check if parameters are passed correctly
       expect(res.status.calledWith(200)).to.be.true;
       expect(res.json.calledWith(mockUsers)).to.be.true;
-
+  
       userService.getAllUsers.restore();
     });
-
-    it('should return 500 if service throws an error', async () => {
-      sinon.stub(userService, 'getAllUsers').throws(new Error('Service Error'));
-
+  
+    it('should return sorted users in descending order', async () => {
+      const mockUsers = { users: [{ id: 2, name: 'Jane Doe' }, { id: 1, name: 'John Doe' }], currentPage: 1, totalPages: 1, totalUsers: 2 };
+      sinon.stub(userService, 'getAllUsers').resolves(mockUsers);
+  
+      req.query = { sort: 'desc' }; // Only sorting
+  
       await userController.getAllUsers(req, res);
-
+  
+      expect(userService.getAllUsers.calledWith(1, 10, 'desc')).to.be.true; // Default page and limit, but sorting desc
+      expect(res.status.calledWith(200)).to.be.true;
+      expect(res.json.calledWith(mockUsers)).to.be.true;
+  
+      userService.getAllUsers.restore();
+    });
+  
+    it('should return 500 if service throws an error during pagination', async () => {
+      sinon.stub(userService, 'getAllUsers').throws(new Error('Service Error'));
+  
+      req.query = { page: '3', limit: '5' }; // Simulate pagination params
+  
+      await userController.getAllUsers(req, res);
+  
       expect(res.status.calledWith(500)).to.be.true;
-      expect(res.json.calledWith({ message: 'Service Error' })).to.be.true;
-
+      expect(res.json.calledWith({ message: 'Error retrieving users', error: 'Service Error' })).to.be.true;
+  
       userService.getAllUsers.restore();
     });
   });
-
+  
   describe('getUser', () => {
     it('should return a user and status 200 if user exists', async () => {
       const mockUser = { id: 1, name: 'John Doe' };
