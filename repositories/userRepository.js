@@ -24,15 +24,33 @@ const userRepository = {
     }
   },
   
-  async getAllUsers() {
+  async getAllUsers(page = 1, limit = 10, sort = 'asc') {
     try {
-      log.info('Getting all users');
-      const users = await User.find();
-      log.info('All users retrieved: ' + users);
-      return users;
+      log.info(`Getting users - Page: ${page}, Limit: ${limit}, Sort: ${sort}`);
+  
+      const users = await User.find()
+        .sort({ createdAt: sort === 'asc' ? 1 : -1 }) // Adjust sorting based on 'asc' or 'desc'
+        .skip((page - 1) * limit) // Skip documents for pagination
+        .limit(limit); // Limit number of documents per page
+  
+      const totalUsers = await User.countDocuments(); // Total users for calculating total pages
+      const totalPages = Math.ceil(totalUsers / limit);
+  
+      log.info(`Users retrieved: ${users.length}`);
+      return {
+        users,
+        currentPage: page,
+        totalPages,
+        totalUsers
+      };
     } catch (error) {
-      log.error('Failed to retrieve all users');
-      return[];
+      log.error('Failed to retrieve users');
+      return {
+        users: [],
+        currentPage: page,
+        totalPages: 0,
+        totalUsers: 0
+      };
     }
   },
   

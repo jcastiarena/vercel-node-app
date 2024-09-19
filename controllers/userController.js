@@ -18,12 +18,13 @@ const userController = {
   },
 
   async getAllUsers(req, res) {
+    const { page = 1, limit = 10, sort = 'asc' } = req.query; // Extract query params
+    log.info(`Getting users - Page: ${page}, Limit: ${limit}, Sort: ${sort}`);
     try {
-      const users = await userService.getAllUsers();
-      log.debug('Users retrieved: ${JSON.stringify(users)}');
-      res.status(200).json(users);
+      const result = await userService.getAllUsers(Number(page), Number(limit), sort);
+      res.status(200).json(result); // Return paginated users with metadata
     } catch (error) {
-      res.status(500).json({ message: error.message });
+      res.status(500).json({ message: 'Error retrieving users', error: error.message });
     }
   },
 

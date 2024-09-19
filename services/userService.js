@@ -9,8 +9,8 @@ const userService = {
     return await userRepository.getUser(userId);
   },
   
-  async getAllUsers() {
-    return await userRepository.getAllUsers();
+  async getAllUsers(page, limit, sort) {
+    return await userRepository.getAllUsers(page, limit, sort);
   },
   
   async patchUser(userId, userData) {
